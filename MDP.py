@@ -22,9 +22,6 @@ while delta >= theta:
             q_values.append(rtmp)
         value_function[s] = max(q_values)
         delta = max(delta, abs(v - value_function[s]))
-print("Optimal Value Function:")
-for i in range(48):
-    print(i, ': ', value_function[i])
 optimal_policy = np.zeros(48, dtype=int)
 for s in range(48):
     q_values = []
